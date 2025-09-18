@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	/* Colors */
+	--color-primary-500: oklch(62.3% 0.214 259.815);
+	--color-total-returned: oklch(0.5635 0.1439 300.52);
+	--color-total-products: oklch(0.7547 0.1057 69.19);
+	--color-in-stock: oklch(0.6859 0.1667 154.86);
+	--color-outof-stock: oklch(0.6371 0.2104 28.54);
+	--color-border: oklch(98.5% 0.002 247.839);
+	--color-heading: oklch(27.8% 0.033 256.848);
+	--color-sub-heading: oklch(44.6% 0.03 256.802);
+	--color-body: oklch(70.7% 0.022 261.325);
+
+	/* Gray/Text Colors */
+	--color-gray-50: oklch(0.9579 0.0029 264.54); /* #f0f1f3 */
+	--color-gray-100: oklch(0.8663 0.0089 264.52); /* #d0d3d9 */
+	--color-gray-200: oklch(0.7983 0.0147 268.46); /* #b9bdc7 */
+	--color-gray-300: oklch(0.7014 0.0219 264.42); /* #989fad */
+	--color-gray-400: oklch(0.6422 0.0257 264.38); /* #858d9d */
+	--color-gray-500: oklch(0.5444 0.035 265.11); /* #667085 */
+	--color-gray-600: oklch(0.5096 0.0322 265.22); /* #5d6679 */
+	--color-gray-700: oklch(0.4295 0.0254 261.66); /* #48505e  */
+	--color-gray-800: oklch(0.3627 0.0207 262.6); /* #383e49 */
+	--color-gray-900: oklch(0.305 0.0172 266.39); /* #2b2f38 */
+
+	/* Main Colors */
+	--color-primary-50: oklch(0.9549 0.0188 255.53); /* #e8f1fd */
+	--color-primary-100: oklch(0.8586 0.0628 255.89); /* #b6d3fa */
+	--color-primary-200: oklch(0.7902 0.0959 256.93); /* #93bdf8 */
+	--color-primary-300: rgb(98, 159, 244); /* #629ff4 */
+	--color-primary-400: rgb(68, 141, 242); /* #448df2 */
+	--color-primary-500: rgb(21, 112, 239); /* #1570ef */
+	--color-primary-600: rgb(19, 102, 217); /* #1366d9 */
+	--color-primary-700: rgb(15, 80, 170); /* #0f50aa */
+	--color-primary-800: rgb(12, 62, 131); /* #0c3e83 */
+	--color-primary-900: rgb(9, 47, 100); /* #092f64 */
+
+	/* Error Colors */
+	--color-red-50: rgb(254, 236, 235); /* #feeceb */
+	--color-red-100: rgb(250, 197, 193); /* #fac5c1 */
+	--color-red-200: rgb(248, 169, 163); /* #f8a9a3 */
+	--color-red-300: rgb(245, 130, 122); /* #f5827a */
+	--color-red-400: rgb(243, 105, 96); /* #f36960 */
+	--color-red-500: rgb(240, 68, 56); /* #f04438 */
+	--color-red-600: rgb(218, 62, 51); /* #da3e33 */
+	--color-red-700: rgb(170, 48, 40); /* #aa3028 */
+	--color-red-800: rgb(132, 37, 31); /* #84251f */
+	--color-red-900: rgb(101, 29, 24); /* #651d18 */
+
+	/* Warning Colors */
+	--color-warning-50: rgb(254, 244, 230); /*  */
+	--color-warning-100: rgb(253, 221, 179); /*  */
+	--color-warning-200: rgb(251, 204, 142); /*  */
+	--color-warning-300: rgb(250, 181, 90); /*  */
+	--color-warning-400: rgb(249, 166, 58); /*  */
+	--color-warning-500: rgb(247, 144, 9); /*  */
+	--color-warning-600: rgb(225, 131, 8); /*  */
+	--color-warning-700: rgb(175, 102, 6); /*  */
+	--color-warning-800: rgb(136, 79, 5); /*  */
+	--color-warning-900: rgb(104, 60, 4); /*  */
+
+	/* Success Colors */
+	--color-success-50: rgb(231, 248, 240); /*  */
+	--color-success-100: rgb(182, 233, 209); /*  */
+	--color-success-200: rgb(146, 222, 186); /*  */
+	--color-success-300: rgb(96, 207, 155); /*  */
+	--color-success-400: rgb(65, 197, 136); /*  */
+	--color-success-500: rgb(18, 183, 106); /*  */
+	--color-success-600: rgb(16, 167, 96); /*  */
+	--color-success-700: rgb(13, 130, 75); /*  */
+	--color-success-800: rgb(10, 101, 58); /*  */
+	--color-success-900: rgb(8, 77, 45); /*  */
+
+	/* 🎨 Typography Scale */
+
+	/* Fonts */
+	--font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+		Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+	/* Display */
+	--text-display-sm: 1.875rem; /* 30px */
+	--leading-display-sm: 2.375rem; /* 38px */
+
+	--text-display-xs: 1.5rem; /* 24px */
+	--leading-display-xs: 2rem; /* 32px */
+
+	/* Text */
+	--text-xl: 1.25rem; /* 20px */
+	--leading-xl: 1.875rem; /* 30px */
+
+	--text-lg: 1.125rem; /* 18px */
+	--leading-lg: 1.75rem; /* 28px */
+
+	--text-md: 1rem; /* 16px */
+	--leading-md: 1.5rem; /* 24px */
+
+	--text-sm: 0.875rem; /* 14px */
+	--leading-sm: 1.25rem; /* 20px */
+}
+
+:root {
+	font-family: var(--font-sans);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	transition: background-color 0.3s, color 0.3s;
+}
