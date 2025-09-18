@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ThemeToggle from "./components/ThemeToggle";
 import Navbar from "./components/Navbar";
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
@@ -7,6 +6,35 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import { ThemeProvider } from "./contexts/ThemeContext.jsx";
+import SignUp from "./pages/SignUp.jsx";
+
+const mainRoutes = [
+	{
+		path: "/",
+		component: <Home />,
+	},
+	{
+		path: "/about",
+		component: <About />,
+	},
+
+	// { path: "/contact", component: <Contact /> },
+];
+
+const authRoutes = [
+	{
+		path: "/login",
+		title: "Login to your account",
+		subtitle: "Welcome back! Please enter your details.",
+		component: <Login />,
+	},
+	{
+		path: "/signup",
+		title: "Create an account",
+		subtitle: "Join now – it’s completely free!",
+		component: <SignUp />,
+	},
+];
 
 export default function App() {
 	return (
@@ -16,33 +44,27 @@ export default function App() {
 					<Navbar />
 					<main className="p-6">
 						<Routes>
-							<Route
-								path="/"
-								element={
-									<MainLayout>
-										<Home />
-									</MainLayout>
-								}
-							/>
-							<Route
-								path="/about"
-								element={
-									<MainLayout>
-										<About />
-									</MainLayout>
-								}
-							/>
-							<Route
-								path="/login"
-								element={
-									<AuthLayout
-										title="Login to your account"
-										subtitle={"Welcome back! Please enter your details."}
-									>
-										<Login />
-									</AuthLayout>
-								}
-							/>
+							{/* Main pages */}
+							{mainRoutes.map((route) => (
+								<Route
+									key={route.path}
+									path={route.path}
+									element={<MainLayout>{route.component}</MainLayout>}
+								/>
+							))}
+
+							{/* Auth pages */}
+							{authRoutes.map((route) => (
+								<Route
+									key={route.path}
+									path={route.path}
+									element={
+										<AuthLayout title={route.title} subtitle={route.subtitle}>
+											{route.component}
+										</AuthLayout>
+									}
+								/>
+							))}
 						</Routes>
 					</main>
 				</div>
