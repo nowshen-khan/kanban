@@ -4,9 +4,10 @@ import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Login from "./pages/Login";
+import Login from "./pages/auth/Login.jsx";
 import { ThemeProvider } from "./contexts/ThemeContext.jsx";
-import SignUp from "./pages/SignUp.jsx";
+import SignUp from "./pages/auth/SignUp.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 const mainRoutes = [
 	{
@@ -16,6 +17,10 @@ const mainRoutes = [
 	{
 		path: "/about",
 		component: <About />,
+	},
+	{
+		path: "/dashboard",
+		component: <Dashboard />,
 	},
 
 	// { path: "/contact", component: <Contact /> },
@@ -41,7 +46,6 @@ export default function App() {
 		<ThemeProvider>
 			<BrowserRouter>
 				<div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
-					<Navbar />
 					<main className="p-6">
 						<Routes>
 							{/* Main pages */}
