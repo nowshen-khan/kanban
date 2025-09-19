@@ -8,6 +8,7 @@ import Login from "./pages/auth/Login.jsx";
 import { ThemeProvider } from "./contexts/ThemeContext.jsx";
 import SignUp from "./pages/auth/SignUp.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
+import { Analytics } from "@vercel/analytics/react";
 
 const mainRoutes = [
 	{
