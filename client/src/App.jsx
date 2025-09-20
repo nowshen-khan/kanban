@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
 import Home from "./pages/Home";
@@ -8,7 +7,6 @@ import Login from "./pages/auth/Login.jsx";
 import { ThemeProvider } from "./contexts/ThemeContext.jsx";
 import SignUp from "./pages/auth/SignUp.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
-import { Analytics } from "@vercel/analytics/react";
 
 const mainRoutes = [
 	{
@@ -47,7 +45,7 @@ export default function App() {
 		<ThemeProvider>
 			<BrowserRouter>
 				<div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
-					<main className="p-6">
+					<main>
 						<Routes>
 							{/* Main pages */}
 							{mainRoutes.map((route) => (
