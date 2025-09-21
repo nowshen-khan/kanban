@@ -1,10 +1,10 @@
 import React from "react";
-import SalesOverview from "../components/dashboard/SalesOverview";
+import DashboardStats from "../components/dashboard/DashboardStats";
 
 const Dashboard = () => {
 	return (
 		<div>
-			<SalesOverview />
+			<DashboardStats />
 		</div>
 	);
 };
