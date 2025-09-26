@@ -2,27 +2,50 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Login from "./pages/auth/Login.jsx";
 import { ThemeProvider } from "./contexts/ThemeContext.jsx";
 import SignUp from "./pages/auth/SignUp.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
+import Inventory from "./pages/Inventory.jsx";
+import Reports from "./pages/Reports.jsx";
+import Suppliers from "./pages/Suppliers.jsx";
+import Orders from "./pages/Orders.jsx";
+import ManageStore from "./pages/ManageStore.jsx";
+import Settings from "./pages/Settings.jsx";
+import Logout from "./pages/auth/Logout.jsx";
 
 const mainRoutes = [
 	{
 		path: "/",
 		component: <Home />,
 	},
-	{
-		path: "/about",
-		component: <About />,
-	},
+
 	{
 		path: "/dashboard",
 		component: <Dashboard />,
 	},
-
-	// { path: "/contact", component: <Contact /> },
+	{
+		path: "/inventory",
+		component: <Inventory />,
+	},
+	{
+		path: "/reports",
+		component: <Reports />,
+	},
+	{
+		path: "/suppliers",
+		component: <Suppliers />,
+	},
+	{
+		path: "/orders",
+		component: <Orders />,
+	},
+	{
+		path: "/manage-store",
+		component: <ManageStore />,
+	},
+	{ path: "/settings", component: <Settings /> },
+	{ path: "/logout", component: <Logout /> },
 ];
 
 const authRoutes = [
