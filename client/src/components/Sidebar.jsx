@@ -58,7 +58,7 @@ export default function Navbar() {
 			<Link
 				to={link.path}
 				key={link.path}
-				className={`hover:underline flex flex-row items-center gap-2 ${
+				className={`hover:underline flex flex-row items-center gap-2 text-md leading-md ${
 					isActiveLink(link.path)
 						? "text-primary-500"
 						: "text-gray-600 dark:text-gray-400"
@@ -85,9 +85,9 @@ export default function Navbar() {
 				</motion.div>
 			</div>
 
-			<div className="flex flex-col justify-between h-screen p-4">
+			<div className="flex flex-col justify-between gap-50 p-4">
 				{/* Top nav */}
-				<nav className="flex flex-col gap-4">{renderLinks(menuLinks)}</nav>
+				<nav className="flex flex-col gap-4 ">{renderLinks(menuLinks)}</nav>
 
 				{/* Bottom nav */}
 				<nav className="flex flex-col gap-2">{renderLinks(authLinks)}</nav>
