@@ -1,9 +1,10 @@
-import DashboardStat from "../models/Dashboard.js";
+import DashboardStat from "../models/DashboardSection.js";
 
 // Get all dashboard sections
 export const getDashboardStats = async (req, res) => {
 	try {
 		const stats = await DashboardStat.find();
+		console.log(stats);
 		res.json(stats);
 	} catch (error) {
 		res.status(500).json({ message: error.message });

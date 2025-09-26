@@ -2,11 +2,12 @@
 import axios from "axios";
 
 const API = axios.create({
-	baseURL: "http://localhost:5000/api", // your backend URL
+	baseURL: import.meta.env.VITE_SERVER, // your backend URL
 });
 
 export const getDashboardStats = async () => {
 	const response = await API.get("/dashboard");
+	console.log(response.data);
 	return response.data;
 };
 

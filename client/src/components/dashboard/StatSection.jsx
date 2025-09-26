@@ -8,11 +8,19 @@ export default function StatSection({
 	cols = 4,
 	width = "w-full",
 }) {
-	const colClasses = {
-		1: "grid-cols-1",
-		2: "grid-cols-2",
-		3: "grid-cols-3",
-		4: "grid-cols-4",
+	const getCols = (cols) => {
+		switch (cols) {
+			case 1:
+				return "grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1";
+			case 2:
+				return "grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2";
+			case 3:
+				return "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3";
+			case 4:
+				return "grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4";
+			default:
+				return "grid-cols-1";
+		}
 	};
 	return (
 		<div
@@ -20,13 +28,9 @@ export default function StatSection({
 		>
 			<h3 className="text-xl leading-xl font-medium mb-3">{title}</h3>
 			<div
-				className={`grid gap-4 
-          grid-cols-1 
-          sm:${colClasses[Math.min(2, cols)]} 
-          md:${colClasses[cols]} 
-          lg:${colClasses[cols]} 
-          xl:${colClasses[cols]} 
-          2xl:${colClasses[cols]}`}
+				className={`grid gap-4 ${getCols(cols)}
+        
+		  `}
 			>
 				{stats.map((stat, index) => {
 					const IconComponent = iconMap[stat.icon];

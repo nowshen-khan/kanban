@@ -2,7 +2,7 @@ import express from "express";
 import connectDB from "./config/db.js";
 import cors from "cors";
 import dotenv from "dotenv";
-import Section from "./models/Dashboard.js";
+
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 
 dotenv.config();
