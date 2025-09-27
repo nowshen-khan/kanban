@@ -2,7 +2,7 @@
 import axios from "axios";
 import dashboardData from "../data/saas.DashboardSections.json";
 
-const isDev = import.meta.env.MODE === "development";
+const isDev = true; // import.meta.env.MODE === development;
 
 const API = axios.create({
 	baseURL: isDev ? "" : import.meta.env.VITE_SERVER_LOCAL,
@@ -38,4 +38,4 @@ export const getDashboardStatById = async (id) => {
 	}
 };
 
-// You can also add POST, PUT, DELETE if needed
+// TODO: add POST, PUT, DELETE if needed
