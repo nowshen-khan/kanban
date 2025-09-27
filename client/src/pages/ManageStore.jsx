@@ -1,7 +1,7 @@
 import React from "react";
 
 const ManageStore = () => {
-	return <div>ManageStore</div>;
+	return <div>Manage Store</div>;
 };
 
 export default ManageStore;
