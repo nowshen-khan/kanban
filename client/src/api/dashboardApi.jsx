@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-	baseURL: "https://kanban-server-04l6.onrender.com/api", // import.meta.env.VITE_SERVER,
+	baseURL: import.meta.env.VITE_SERVER,
 	headers: {
 		"Content-Type": "application/json",
 	},
