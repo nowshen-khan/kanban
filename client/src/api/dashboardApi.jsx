@@ -1,15 +1,21 @@
 // src/api/dashboardApi.js
 import axios from "axios";
+import dashboardData from "../data/saas.DashboardSections.json";
+
+const isDev = import.meta.env.MODE === "development";
 
 const API = axios.create({
-	baseURL: import.meta.env.VITE_SERVER,
+	baseURL: isDev ? "" : import.meta.env.VITE_SERVER_LOCAL,
 	headers: {
 		"Content-Type": "application/json",
 	},
 });
-console.log("BaseURL:", import.meta.env.VITE_SERVER);
 
 export const getDashboardStats = async () => {
+	if (isDev) {
+		// Design mode: load from static JSON
+		return dashboardData;
+	}
 	try {
 		const response = await API.get("/dashboard");
 		return response.data;
@@ -20,6 +26,9 @@ export const getDashboardStats = async () => {
 };
 
 export const getDashboardStatById = async (id) => {
+	if (isDev) {
+		return dashboardData.find((s) => s.id === id);
+	}
 	try {
 		const response = await API.get(`/dashboard/${id}`);
 		return response.data;

@@ -13,7 +13,7 @@ const Navbar = ({ onMenuClick }) => {
 	return (
 		<header
 			className="
-        flex flex-col sm:flex-row  
+        flex flex-col sm:flex-row 
         items-center sm:justify-between
         gap-4 sm:gap-0             
         p-4 

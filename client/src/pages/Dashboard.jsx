@@ -1,6 +1,5 @@
 // src/pages/Dashboard.jsx
 import React, { useEffect, useState } from "react";
-import DashboardStats from "../components/dashboard/DashboardStats";
 import StatSection from "../components/dashboard/StatSection";
 import { getDashboardStats } from "../api/dashboardApi";
 

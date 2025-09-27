@@ -12,6 +12,8 @@
 			"src": "/api/(.*)",
 			"dest": "https://kanban-server-04l6.onrender.com/api/$1"
 		},
+		{ "src": "/assets/(.*)", "dest": "/assets/$1" },
+		{ "src": "/favicon.ico", "dest": "/favicon.ico" },
 		{ "src": "/(.*)", "dest": "/index.html" }
 	]
 }

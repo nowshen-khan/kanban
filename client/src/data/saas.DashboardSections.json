@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "68d6c10ec3eaccf783c3aac8"
+  },
+  "title": "Sales Overview",
+  "cols": 4,
+  "width": "w-[60%]",
+  "stats": [
+    {
+      "icon": "ChartBarIcon",
+      "title": "Sales",
+      "value": "1,240"
+    },
+    {
+      "icon": "CurrencyDollarIcon",
+      "title": "Revenue",
+      "value": "$18,450"
+    },
+    {
+      "icon": "TrendingUpIcon",
+      "title": "Profit",
+      "value": "$4,200"
+    },
+    {
+      "icon": "CalculatorIcon",
+      "title": "Cost",
+      "value": "$14,250"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68d6c10ec3eaccf783c3aac9"
+  },
+  "title": "Inventory Summary",
+  "cols": 2,
+  "width": "w-[40%]",
+  "stats": [
+    {
+      "icon": "ArchiveBoxIcon",
+      "title": "Qty in Hand",
+      "value": "3,452"
+    },
+    {
+      "icon": "TruckIcon",
+      "title": "To be Received",
+      "value": "120"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68d6c10ec3eaccf783c3aaca"
+  },
+  "title": "Purchase Overview",
+  "cols": 4,
+  "width": "w-[60%]",
+  "stats": [
+    {
+      "icon": "ShoppingCartIcon",
+      "title": "Purchase",
+      "value": "560"
+    },
+    {
+      "icon": "CurrencyDollarIcon",
+      "title": "Cost",
+      "value": "$7,200"
+    },
+    {
+      "icon": "XCircleIcon",
+      "title": "Cancel",
+      "value": "8"
+    },
+    {
+      "icon": "ArrowPathIcon",
+      "title": "Return",
+      "value": "22"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68d6c10ec3eaccf783c3aacb"
+  },
+  "title": "Product Summary",
+  "cols": 2,
+  "width": "w-[40%]",
+  "stats": [
+    {
+      "icon": "UsersIcon",
+      "title": "Suppliers",
+      "value": "31"
+    },
+    {
+      "icon": "TagIcon",
+      "title": "Categories",
+      "value": "21"
+    }
+  ]
+}]
