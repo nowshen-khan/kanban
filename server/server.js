@@ -13,7 +13,10 @@ app.use(express.json());
 
 app.use(
 	cors({
-		origin: [process.env.Allowed_Origins_Client, Allowed_Origins_Client_Local],
+		origin: [
+			process.env.Allowed_Origins_Client,
+			process.env.Allowed_Origins_Client_Local,
+		],
 		methods: ["GET", "POST", "PUT", "DELETE"],
 		credentials: true,
 	})
